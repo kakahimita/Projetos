@@ -55,6 +55,19 @@ public class Ex001 {
         float nota5 = 4.1f;
         System.out.format("A nota e %.3f \n", nota5);
         
+        // Exemplo pego no Livro da Deitel 10edição
+        // e possivel utilizar o printf chamando a soma como %s
+        // e quebrar a linha utlizando %n juntos 
+        // ex:
+        
+        float nz1 = (float) 12.4f;
+        float nz2 = (float) 13.f;
+        
+        float somaxt2 = nz1 + nz2;
+        
+        System.out.printf("soma é %s%n", somaxt2);
+        
+        
         
         
         
