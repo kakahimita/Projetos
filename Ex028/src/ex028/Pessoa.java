@@ -25,7 +25,7 @@ public abstract class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" + "nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", experiencia=" + experiencia + '}';
+        return "== Pessoa == \n" + "nome: " + nome + "\nidade: " + idade + "\nsexo: " + sexo + "\nexperiencia: " + experiencia + "";
     }
     
     
