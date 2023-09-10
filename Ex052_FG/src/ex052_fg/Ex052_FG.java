@@ -1,10 +1,10 @@
-package pratica35;
+package ex052_fg;
 
 /**
  *
  * @author kakah
  */
-public class Pratica35 {
+public class Ex052_FG {
 
 
     public static void main(String[] args) {

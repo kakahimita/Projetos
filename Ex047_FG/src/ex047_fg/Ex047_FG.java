@@ -17,6 +17,8 @@ public class Ex047_FG {
          * e preencha M2 com os elementos restantes.
         */
         
+        // vcê tb pode usar um 'Arrays.sort();' para classificar em ordem
+        
         // Declara duas matrizes de inteiros
         int[] m1 = {1, 3, 5, 7, 9};
         int[] m2 = {2, 4, 6, 8, 10};
