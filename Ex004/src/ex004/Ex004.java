@@ -7,6 +7,8 @@ public class Ex004 {
 
     public static void main(String[] args) {
         
+        // Funções matemáticas em Java
+        
         // utilizando Class Math
         
         // PI   | PI - Constante | Math.PI       | 3.1415... |
