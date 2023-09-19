@@ -98,15 +98,28 @@ public class Ex002 {
         media = (float)(n1+n2)/2;
         
         System.out.println(media);
-        
-        
-        
         */
         
+        /* EX Para ler vários dados na mesma linha.
+         * entranda do console: Maria 30 4,5 
+         * este resultado armazena em apenas uma linha
+         * porem em diferentes variáveis.
+        */
         
+        String x;
+        int y;
+        double z;
         
+        x = teclado.next();
+        y = teclado.nextInt();
+        z = teclado.nextDouble();
         
+        System.out.println("dados digitados:");
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
         
+        teclado.close();
         
         
         
