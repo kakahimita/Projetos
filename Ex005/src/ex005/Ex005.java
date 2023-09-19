@@ -7,7 +7,7 @@ public class Ex005 {
 
     public static void main(String[] args) {
         
-        // Operador Ternario
+        // Operador Ternario.
         // também conhecido como operador condicional
         // permite tomar decisões com base em uma condição e retorna
         // um valor com base na decisao
