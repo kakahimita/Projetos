@@ -7,7 +7,7 @@ public class Ex007 {
 
     public static void main(String[] args) {
         
-        // Operadores Logico
+        // Operadores Logico.
         // Usados para realizar operações lógica booleana
         // combinando ou avaliando valores booleanos.
         
