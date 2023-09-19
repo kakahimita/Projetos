@@ -1,6 +1,8 @@
 
 package ex001;
 
+import java.util.Locale;
+
 
 public class Ex001 {
 
@@ -67,7 +69,30 @@ public class Ex001 {
         
         System.out.printf("soma é %s%n", somaxt2);
         
+        System.out.println("======// =======");
+        // para trocar a virgula (,) por ponto (.) 
+        // utilize Locale.setDefault(Locale.US);
+        // e import java.util.Locale;
         
+        Locale.setDefault(Locale.US);
+        System.out.printf("A nota de %s é %.4f \n", nome, nota3);
+        
+        System.out.println("====== // =======");
+        /* Para concatenar vários elementos em um mesmo comando de escrita
+         * %f = ponto flutuante
+         * %d = inteiro
+         * %s = texto
+         * %n = quebra de linha
+        */ 
+        
+        // Regra geral para printf:
+        
+        // "TEXTO1 %f TEXTO2 %f  TEXTO3", variavel1, variavel2
+        
+        String nome001 = "Maria";
+        int idade001 = 31;
+        double renda = 4000.0;
+        System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome001, idade001, renda);
         
         
         
