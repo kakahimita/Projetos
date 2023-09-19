@@ -7,7 +7,7 @@ public class Ex006 {
 
     public static void main(String[] args) {
         
-        //operadores relacionais usando operacao ternaria
+        //operadores relacionais usando operacao ternaria.
         
         //         Operadores Relacionais
         //---------------------------------------------
