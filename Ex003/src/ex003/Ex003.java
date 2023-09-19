@@ -45,7 +45,7 @@ public class Ex003 {
         System.out.println(numero3);
         
         // 6)
-        // Operadores de Atribuição
+        // Operadores de Atribuição.
         
         // += Somar e atribuir     | a += b | a = a + b
         // -= subtrair e atribuir  | a -= b | a = a - b
