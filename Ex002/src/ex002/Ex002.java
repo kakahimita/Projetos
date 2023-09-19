@@ -9,6 +9,7 @@ public class Ex002 {
 
     public static void main(String[] args) {
         
+        
         //exercicio para leitura de informaçoes com "Scanner"
         // 1)
         //leitura de nome é nota
@@ -87,6 +88,7 @@ public class Ex002 {
         
         System.out.printf("%.4f \n", media43);
         
+        System.out.println("===== // =====");
         
         /*  7) outra forma de converter
         
@@ -118,6 +120,52 @@ public class Ex002 {
         System.out.println(x);
         System.out.println(y);
         System.out.println(z);
+        
+        System.out.println("==== // == // ==== // === ");
+        
+        // Atenção: quebra de linha pendente!
+        
+        /* Quando você usa um comando de leitura diferente do nextLine()
+         * e dá alguma quebra de linha, essa quebra de linha fica "pendente"
+         * na entrada padrao.
+         * 
+         * se você então fizer um nextLine(), aquela quebra de linha pendente
+         * será absorvida pelo nextLine().
+         *
+         * Solução:
+         *
+         * Faça um nextLine() extra antes de fazer o nextLine() de seu
+         * interesse.
+         *
+         * Obs:
+         * Entrada no constrole: 
+         * 30
+         * Bom dia
+         * Boa tarde
+         * Boa noite
+         *
+         * :D
+         * tente fazer sem um nextLine() extra para identificar o erro.
+        */
+        
+        
+        
+        int ab;
+        String s1, s2, s3;
+        
+        ab = teclado.nextInt();
+        teclado.nextLine();
+        s1 = teclado.nextLine();
+        s2 = teclado.nextLine();
+        s3 = teclado.nextLine();
+        
+        System.out.println("=== // === ");
+        
+        System.out.println("Dados digitados: ");
+        System.out.println(x);
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
         
         teclado.close();
         
