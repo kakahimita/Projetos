@@ -89,7 +89,8 @@ public class Ex004 {
         int n26 = (int) (1 + ale * (100-1));
         System.out.println("random 1  a 100 : "+ n26);
         
-        
+        // obs: para maiores informações das funções Math
+        // acesse java.lang.Math
 
     }
     
