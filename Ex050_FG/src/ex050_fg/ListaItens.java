@@ -58,5 +58,9 @@ public class ListaItens {
     public int size() {
         return this.tamanho;
     }
+
+    Item[] toArray() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
     
