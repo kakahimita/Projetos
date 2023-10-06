@@ -3,6 +3,8 @@ package ex063_udemy;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -60,6 +62,19 @@ public class Ex063_Udemy {
         
         System.out.println(d10);
         System.out.println(d11);
+        
+        
+        // Convertendo data-hora para texto
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault());
+        
+        System.out.println(d01.format(fmt1));
+        System.out.println(fmt1.format(d01));
+        System.out.println(d01.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+        
+        System.out.println(d05.format(fmt2));
+        
     }
 
 }
