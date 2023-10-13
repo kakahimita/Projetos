@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Pratica40 {
 
     public static void main(String[] args) {
+        //acessp de arquivo com scanner e file
         File file = new File("C:\\temp\\in.txt");
         Scanner sc = null;
         try {
