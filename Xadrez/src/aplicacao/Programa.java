@@ -1,10 +1,10 @@
-package sad333333;
+package aplicacao;
 
 /**
  *
  * @author kakah
  */
-public class Sad333333 {
+public class Programa {
 
 
     public static void main(String[] args) {
