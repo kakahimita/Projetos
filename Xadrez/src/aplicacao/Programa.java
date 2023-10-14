@@ -1,5 +1,9 @@
 package aplicacao;
 
+import Xadrez.PartidaDeXadrez;
+import tabuleiro.Posicao;
+import tabuleiro.Tabuleiro;
+
 /**
  *
  * @author kakah
@@ -9,7 +13,8 @@ public class Programa {
 
     public static void main(String[] args) {
 
-        System.out.println("hello world!");
+        PartidaDeXadrez partidaDeXadrez = new PartidaDeXadrez();
+        UI.printTabuleiro(partidaDeXadrez.getPecas());
     }
 
 }
