@@ -6,45 +6,64 @@ package tabuleiro;
  */
 public class Tabuleiro {
 
-    private int linha;
-    private int coluna;
+    private int linhas;
+    private int colunas;
     private Peca[][] pecas;
 
     //construtor
-    public Tabuleiro(int linha, int coluna) {
-        this.linha = linha;
-        this.coluna = coluna;
-        pecas = new Peca[linha][coluna];
+    public Tabuleiro(int linhas, int colunas) {
+        if(linhas < 1 || colunas < 1) {
+            throw new TabuleiroExcecoes("Erro ao criar tabuleiro: é necessario que haja ao menos 1 linha e 1 coluna");
+        }
+        this.linhas = linhas;
+        this.colunas = colunas;
+        pecas = new Peca[linhas][colunas];
     }
     
     //metodos
     public Peca peca(int linha, int coluna){
+        if (!posicaoExistente(linha, coluna)) {
+            throw new TabuleiroExcecoes("Posiçao nção tem no tabuleiro");
+        }
         return pecas[linha][coluna];
     }
     
     public Peca peca(Posicao posicao) {
+        if (!posicaoExistente(posicao)) {
+            throw new TabuleiroExcecoes("Posiçao nção tem no tabuleiro");
+        }
         return pecas[posicao.getLinha()][posicao.getColuna()];
     }
     
     public void ColocarPeca(Peca peca, Posicao posicao) {
+        if (thereIsAPiece(posicao)) {
+            throw new TabuleiroExcecoes("já existe uma peça em posição");
+        }
         pecas[posicao.getLinha()][posicao.getColuna()] = peca;
         peca.posicao = posicao;
     }
+    
+    public boolean posicaoExistente(int linha, int coluna) {
+        return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
+    }
+    
+    public boolean posicaoExistente(Posicao posicao) {
+        return posicaoExistente(posicao.getLinha(), posicao.getColuna());
+    }
+    
+    public boolean thereIsAPiece(Posicao posicao) {
+        if (!posicaoExistente(posicao)) {
+            throw new TabuleiroExcecoes("já existe uma peça em posicao");
+        }
+        return peca(posicao) != null;
+    }
 
     //getters e setters
-    public int getLinha() {
-        return linha;
+    public int getLinhas() {
+        return linhas;
     }
 
-    public void setLinha(int linha) {
-        this.linha = linha;
-    }
-
-    public int getColuna() {
-        return coluna;
-    }
-
-    public void setColuna(int coluna) {
-        this.coluna = coluna;
+    public int getColunas() {
+        return colunas;
     }
 }
