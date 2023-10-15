@@ -15,6 +15,8 @@ public class Programa {
 
     public static void main(String[] args) {
         
+        //Eu programando um xadrez >.>
+        
         Scanner sc = new Scanner(System.in);
         PartidaDeXadrez partidaDeXadrez = new PartidaDeXadrez();
 
