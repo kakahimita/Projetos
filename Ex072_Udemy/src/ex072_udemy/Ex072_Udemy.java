@@ -1,0 +1,44 @@
+package ex072_udemy;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ *
+ * @author kakah
+ */
+public class Ex072_Udemy {
+
+    public static void main(String[] args) {
+
+        String path = "c:\\Users\\kakah\\Documents\\in.txt";
+        FileReader fr = null;
+        BufferedReader br = null;
+
+        try {
+            fr = new FileReader(path);
+            br = new BufferedReader(fr);
+
+            String line = br.readLine();
+
+            while (line != null) {
+                System.out.println(line);
+                line = br.readLine();
+            }
+        } catch (IOException e) {
+            System.out.println("error: " + e.getMessage());
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+                if (fr != null) {
+                    fr.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
