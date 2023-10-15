@@ -2,6 +2,9 @@ package aplicacao;
 
 import Xadrez.Cor;
 import Xadrez.XadrezPeca;
+import Xadrez.XadrezPosicao;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /**
  *
@@ -29,6 +32,17 @@ public class UI {
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
 
+    public static XadrezPosicao posicaoXadrezPronto(Scanner sc) {
+        try {
+            String s = sc.nextLine();
+            char coluna = s.charAt(0);
+            int linha = Integer.parseInt(s.substring(1));
+            return new XadrezPosicao(coluna, linha);
+        } catch (RuntimeException e) {
+            throw new InputMismatchException("erro lendo posicação do xadrez");
+        }
+    }
+
     public static void printTabuleiro(XadrezPeca[][] pecas) {
         for (int i = 0; i < pecas.length; i++) {
             System.out.print((8 - i) + " ");
@@ -42,7 +56,7 @@ public class UI {
 
     private static void printPeca(XadrezPeca piece) {
         if (piece == null) {
-           System.out.print("-");
+            System.out.print("-");
         } else {
             if (piece.getCor() == Cor.BRANCO) {
                 System.out.print(ANSI_WHITE + piece + ANSI_RESET);
@@ -51,5 +65,5 @@ public class UI {
             }
         }
         System.out.print(" ");
-    } 
+    }
 }
